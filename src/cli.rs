@@ -13,5 +13,9 @@ pub enum Commands {
         #[arg(short = 'd', long = "description")]
         description: String,
     },
-    List,
+    #[command(alias = "ls")]
+    List {
+        #[arg(short = 'a', long = "all")]
+        all: bool,
+    },
 }
